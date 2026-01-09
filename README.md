@@ -2,6 +2,8 @@
 
 An intelligent customer support system that combines actionable message detection with RAG (Retrieval-Augmented Generation) chatbot capabilities.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://cricbuzzlivestats-app.streamlit.app/](https://ntptwygoz34ofkupgb5wxi.streamlit.app/))
+
 ## 🎯 Features
 
 - **Actionable Message Detection**: Automatically classifies if a message requires a response
