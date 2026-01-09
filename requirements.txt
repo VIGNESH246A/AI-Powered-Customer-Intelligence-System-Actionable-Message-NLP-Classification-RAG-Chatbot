@@ -1,0 +1,27 @@
+# Core dependencies
+google-genai
+faiss-cpu
+numpy
+pandas
+
+# Machine Learning
+scikit-learn
+tensorflow
+keras
+
+# NLP and text processing
+spacy
+nltk
+
+# Web framework
+streamlit
+
+# Utilities
+python-dotenv
+tqdm
+joblib
+
+# Visualization
+matplotlib
+seaborn
+plotly
