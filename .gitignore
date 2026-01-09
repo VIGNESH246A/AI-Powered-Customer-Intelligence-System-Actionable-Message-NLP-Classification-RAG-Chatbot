@@ -1,0 +1,155 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+.venv
+env/
+virtualenv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment variables - CRITICAL FOR SECURITY
+.env
+.env.local
+.env.*.local
+*.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Logs
+*.log
+logs/
+*.out
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# LARGE FILES - Don't upload these to GitHub/Streamlit
+# ==================================================
+
+# Training data (can be very large)
+data/nlp_data/*.csv
+!data/nlp_data/.gitkeep
+
+# RAG data - raw knowledge base (if large)
+# Uncomment if your kb.txt is large (>100MB)
+# data/rag_data/raw/kb.txt
+
+# Processed data
+data/rag_data/processed/*.json
+data/rag_data/processed/*.pkl
+
+# Vector store files (generated, not needed in repo)
+data/rag_data/vector_store/
+data/rag_data/vector_store/faiss_index/
+*.index
+*.faiss
+
+# Model files (can be very large - often >100MB)
+# ==================================================
+# If models are >100MB, use Git LFS or exclude them
+models/actionable_detection/*.h5
+models/actionable_detection/*.pkl
+!models/actionable_detection/.gitkeep
+
+# Keep small files needed for deployment
+# If your models are small (<100MB each), comment out the lines above
+# and keep them in the repo
+
+# Streamlit specific
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*~
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Documentation builds
+docs/_build/
+site/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
