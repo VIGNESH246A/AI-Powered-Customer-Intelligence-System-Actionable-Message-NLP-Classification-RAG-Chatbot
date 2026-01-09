@@ -1,38 +1,23 @@
-# Python
+# =========================
+# Python cache / compiled
+# =========================
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
 .Python
-env/
+
+# =========================
+# Virtual Environments
+# =========================
 venv/
 .venv/
-ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Virtual environments
-venv/
-ENV/
-.venv
 env/
+ENV/
 virtualenv/
 
-# IDE
+# =========================
+# IDE / OS files
+# =========================
 .vscode/
 .idea/
 *.swp
@@ -40,116 +25,79 @@ virtualenv/
 *~
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Environment variables - CRITICAL FOR SECURITY
+# =========================
+# Environment variables (SECURITY)
+# =========================
 .env
 .env.local
 .env.*.local
 *.env
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
-
-# Logs
+# =========================
+# Logs / temp
+# =========================
 *.log
 logs/
-*.out
+tmp/
+temp/
+*.tmp
 
-# Testing
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+*.ipynb
+
+# =========================
+# Testing / coverage
+# =========================
 .pytest_cache/
 .coverage
 htmlcov/
 .tox/
 
-# LARGE FILES - Don't upload these to GitHub/Streamlit
-# ==================================================
-
-# Training data (can be very large)
+# =========================
+# TRAINING DATA (exclude)
+# =========================
 data/nlp_data/*.csv
 !data/nlp_data/.gitkeep
 
-# RAG data - raw knowledge base (if large)
-# Uncomment if your kb.txt is large (>100MB)
-# data/rag_data/raw/kb.txt
+# =========================
+# RAG DATA
+# =========================
 
-# Processed data
-data/rag_data/processed/*.json
-data/rag_data/processed/*.pkl
+# Keep raw KB (SOURCE OF TRUTH)
+# ✅ REQUIRED for rebuilding index
+!data/rag_data/raw/kb.txt
 
-# Vector store files (generated, not needed in repo)
+# Exclude generated / processed data
+data/rag_data/processed/
 data/rag_data/vector_store/
-data/rag_data/vector_store/faiss_index/
-*.index
 *.faiss
+*.index
 
-# Model files (can be very large - often >100MB)
-# ==================================================
-# If models are >100MB, use Git LFS or exclude them
-models/actionable_detection/*.h5
-models/actionable_detection/*.pkl
+# =========================
+# MODELS (KEEP FOR STREAMLIT)
+# =========================
+# ❗ Trained models are REQUIRED for inference
+# ❗ DO NOT ignore them
+!models/actionable_detection/*.pkl
+!models/actionable_detection/*.h5
 !models/actionable_detection/.gitkeep
 
-# Keep small files needed for deployment
-# If your models are small (<100MB each), comment out the lines above
-# and keep them in the repo
-
-# Streamlit specific
+# =========================
+# Streamlit
+# =========================
 .streamlit/secrets.toml
 .streamlit/config.toml
 
-# OS specific
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-
-# Backup files
-*.bak
-*.backup
-*~
-*.swp
-*.swo
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Documentation builds
-docs/_build/
-site/
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-
-# Compiled files
-*.pyc
-*.pyo
-*.pyd
-
-# Distribution / packaging
-.Python
+# =========================
+# Build / distribution
+# =========================
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
-*.egg
 MANIFEST

@@ -291,5 +291,4 @@ The build process includes rate limiting for Gemini API. If you hit limits:
 ## 🧑‍💻 Author
 
 **Vignesh A**  
-📍 India 🇮🇳  #   A I - P o w e r e d - C u s t o m e r - I n t e l l i g e n c e - S y s t e m - A c t i o n a b l e - M e s s a g e - C l a s s i f i c a t i o n - R A G - C h a t b o t  
- 
+📍 India 🇮🇳  
