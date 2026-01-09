@@ -1,103 +1,38 @@
-# =========================
-# Python cache / compiled
-# =========================
+# Python
 __pycache__/
 *.py[cod]
-*.so
 .Python
 
-# =========================
-# Virtual Environments
-# =========================
+# Virtual env
 venv/
 .venv/
 env/
-ENV/
-virtualenv/
 
-# =========================
-# IDE / OS files
-# =========================
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# =========================
-# Environment variables (SECURITY)
-# =========================
+# Secrets
 .env
-.env.local
-.env.*.local
 *.env
 
-# =========================
-# Logs / temp
-# =========================
+# Logs
 *.log
 logs/
-tmp/
-temp/
-*.tmp
 
-# =========================
-# Jupyter
-# =========================
-.ipynb_checkpoints/
-*.ipynb
-
-# =========================
-# Testing / coverage
-# =========================
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-
-# =========================
-# TRAINING DATA (exclude)
-# =========================
+# Training data
 data/nlp_data/*.csv
 !data/nlp_data/.gitkeep
 
-# =========================
-# RAG DATA
-# =========================
-
-# Keep raw KB (SOURCE OF TRUTH)
-# ✅ REQUIRED for rebuilding index
-!data/rag_data/raw/kb.txt
-
-# Exclude generated / processed data
+# RAG generated files
 data/rag_data/processed/
 data/rag_data/vector_store/
 *.faiss
 *.index
 
-# =========================
-# MODELS (KEEP FOR STREAMLIT)
-# =========================
-# ❗ Trained models are REQUIRED for inference
-# ❗ DO NOT ignore them
+# Keep models (required for Streamlit)
 !models/actionable_detection/*.pkl
 !models/actionable_detection/*.h5
-!models/actionable_detection/.gitkeep
 
-# =========================
-# Streamlit
-# =========================
+# Streamlit secrets
 .streamlit/secrets.toml
-.streamlit/config.toml
 
-# =========================
-# Build / distribution
-# =========================
-build/
-dist/
-*.egg-info/
-.installed.cfg
-MANIFEST
+# OS
+.DS_Store
+Thumbs.db
