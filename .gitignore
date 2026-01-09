@@ -20,12 +20,6 @@ logs/
 data/nlp_data/*.csv
 !data/nlp_data/.gitkeep
 
-# RAG generated files
-data/rag_data/processed/
-data/rag_data/vector_store/
-*.faiss
-*.index
-
 # Keep models (required for Streamlit)
 !models/actionable_detection/*.pkl
 !models/actionable_detection/*.h5
